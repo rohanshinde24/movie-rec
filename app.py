@@ -33,7 +33,8 @@ def main():
         content_filter = ContentFiltering(data_file)
         movie_title = None
         while not movie_title:
-            movie_title = st.text_input("Enter a movie title:")
+            movie_title = st.text_input("Enter a movie title:", key="movie_title_input")
+
         
         n = st.sidebar.number_input("Number of Recommended Movies", min_value=1, max_value=10, value=5)
         
